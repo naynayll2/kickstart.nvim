@@ -283,6 +283,16 @@ require('lazy').setup({
       require('bufferline').setup {}
     end,
   },
+  {
+    'nvim-neo-tree/neo-tree.nvim',
+    branch = 'v3.x',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'MunifTanjim/nui.nvim',
+      'nvim-tree/nvim-web-devicons', -- optional, but recommended
+    },
+    lazy = false, -- neo-tree will lazily load itself
+  },
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.

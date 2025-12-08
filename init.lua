@@ -246,6 +246,15 @@ require('lazy').setup({
     },
   },
   {
+    'folke/todo-comments.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+  },
+  {
     'akinsho/toggleterm.nvim',
     version = '*',
     opts = {--[[ things you want to change go here]]
@@ -892,7 +901,7 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'monokai-pro-default'
+      vim.cmd.colorscheme 'sorbet'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'

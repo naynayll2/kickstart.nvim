@@ -263,19 +263,6 @@ require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'loctvl842/monokai-pro.nvim',
   {
-    'nvim-neo-tree/neo-tree.nvim',
-    branch = 'v3.x',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
-      'MunifTanjim/nui.nvim',
-      '3rd/image.nvim', -- Optional image support in preview window: See `# Preview Mode` for more information
-    },
-    filesystem = {
-      hijack_netrw_behavior = 'open_current',
-    },
-  },
-  {
     'akinsho/toggleterm.nvim',
     version = '*',
     opts = {--[[ things you want to change go here]]
@@ -289,7 +276,6 @@ require('lazy').setup({
       }
     end,
   },
-  { 'akinsho/bufferline.nvim', version = '*', dependencies = 'nvim-tree/nvim-web-devicons' },
   {
     'akinsho/bufferline.nvim',
     version = '*',
@@ -308,6 +294,9 @@ require('lazy').setup({
       'nvim-tree/nvim-web-devicons', -- optional, but recommended
     },
     lazy = false, -- neo-tree will lazily load itself
+    filesystem = {
+      hijack_netrw_behavior = 'open_current',
+    },
   },
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
